@@ -1,13 +1,8 @@
-version: "3.3"
-
-networks:
-  etcd:
-    external: true
+version: "3.7"
 
 services:
-
   etcd:
-    image: appcelerator/etcd:latest
+    image: cepharum/etcd:latest
     networks:
       - etcd
     environment:
@@ -16,3 +11,6 @@ services:
     deploy:
       mode: replicated
       replicas: 3
+
+networks:
+  etcd:
